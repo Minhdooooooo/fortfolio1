@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Web Developer Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">DEV<span class="text-blue-600">.</span>PORTFOLIO</a>
+            
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" class="hover:text-blue-600 transition">Giới thiệu</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Kỹ năng</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Dự án</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Liên hệ</a>
+            </div>
+
+            <button class="md:hidden text-2xl" id="menu-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
+        <button class="absolute top-6 right-6" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <a href="#about" class="menu-link">Giới thiệu</a>
+        <a href="#skills" class="menu-link">Kỹ năng</a>
+        <a href="#projects" class="menu-link">Dự án</a>
+        <a href="#contact" class="menu-link">Liên hệ</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 text-center md:text-left">
+                <h2 class="text-blue-600 font-semibold tracking-widest mb-4">XIN CHÀO, TÔI LÀ</h2>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                    <span class="gradient-text">Nguyễn Văn A</span><br>
+                    Web Developer.
+                </h1>
+                <p class="text-slate-600 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                    Sinh viên năm cuối ngành CNTT đam mê xây dựng những trải nghiệm web hiện đại, 
+                    tối ưu hiệu suất và thân thiện với người dùng.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Xem dự án của tôi</a>
+                    <a href="#contact" class="border-2 border-slate-200 px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition">Liên hệ ngay</a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-blue-600 rounded-3xl rotate-6 opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Avatar" 
+                         class="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Về bản thân</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 text-slate-600 leading-relaxed">
+                <p>
+                    Tôi hiện đang là sinh viên năm cuối chuyên ngành Lập trình Web tại Đại học [Tên Trường]. 
+                    Với nền tảng kiến thức vững chắc về cấu trúc dữ liệu, giải thuật và tư duy lập trình hệ thống. 
+                    Tôi luôn không ngừng cập nhật các công nghệ mới nhất để giải quyết các vấn đề thực tế.
+                </p>
+                <p>
+                    Mục tiêu của tôi là trở thành một Fullstack Developer chuyên nghiệp, 
+                    có khả năng xây dựng các hệ thống scalable và mang lại giá trị thực cho doanh nghiệp. 
+                    Tôi sẵn sàng học hỏi và cống hiến hết mình cho các dự án đầy thử thách.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Kỹ năng chuyên môn</h2>
+                <p class="text-slate-500">Những công nghệ tôi thường xuyên sử dụng</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+                    <i class="fa-brands fa-html5 text-orange-500 text-5xl mb-4"></i>
+                    <h3 class="font-bold">HTML5 / CSS3</h3>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+                    <i class="fa-brands fa-js text-yellow-400 text-5xl mb-4"></i>
+                    <h3 class="font-bold">JavaScript (ES6+)</h3>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+                    <i class="fa-brands fa-php text-indigo-500 text-5xl mb-4"></i>
+                    <h3 class="font-bold">PHP / Laravel</h3>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+                    <i class="fa-solid fa-database text-blue-500 text-5xl mb-4"></i>
+                    <h3 class="font-bold">MySQL / NoSQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Dự án tiêu biểu</h2>
+                    <p class="text-slate-500">Những sản phẩm tôi đã tham gia phát triển</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card group relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="project-overlay absolute inset-0 bg-blue-900/90 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+                        <p class="text-sm text-center text-slate-200 mb-4">Website bán hàng tích hợp thanh toán và quản lý kho hàng.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-100"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a href="#" class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-100"><i class="fa-solid fa-link text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card group relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="project-overlay absolute inset-0 bg-blue-900/90 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6">
+                        <h3 class="text-xl font-bold mb-2">Learning Management System</h3>
+                        <p class="text-sm text-center text-slate-200 mb-4">Hệ thống quản lý khóa học trực tuyến dành cho sinh viên.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-100"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a href="#" class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-100"><i class="fa-solid fa-link text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card group relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="project-overlay absolute inset-0 bg-blue-900/90 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-sm text-center text-slate-200 mb-4">Chính là website bạn đang xem, thiết kế mobile-first.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-100"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Liên hệ với tôi</h2>
+                <p class="text-slate-400 mb-8 text-lg leading-relaxed">
+                    Bạn có dự án thú vị hay một cơ hội nghề nghiệp? 
+                    Đừng ngần ngại liên lạc, tôi sẽ phản hồi sớm nhất có thể!
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm font-medium">Email</p>
+                            <p class="font-bold">contact@example.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm font-medium">Số điện thoại</p>
+                            <p class="font-bold">+84 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-800 p-8 rounded-3xl">
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-1">Họ và tên</label>
+                        <input type="text" class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Nhập tên của bạn">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-1">Email liên hệ</label>
+                        <input type="email" class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="example@gmail.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-1">Lời nhắn</label>
+                        <textarea rows="4" class="w-full bg-slate-700 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Bạn muốn trao đổi gì?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold transition">Gửi tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-100 text-center text-slate-500 text-sm">
+        <p>© 2024 Nguyen Van A. Designed for recruiters with ❤️</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass', 'shadow-sm', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('glass', 'shadow-sm', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+        closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Form submission (UI only)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Đã gửi thành công!";
+            btn.classList.replace('bg-blue-600', 'bg-green-600');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-green-600', 'bg-blue-600');
+                e.target.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
