@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Đỗ Văn Minh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 leading-relaxed">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 py-6 px-6 md:px-12" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter"><span class="text-blue-600">Portfolio</span></a>
+            
+            <div class="hidden md:flex space-x-10 font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">Giới thiệu</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Kỹ năng</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Dự án</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Liên hệ</a>
+            </div>
+
+            <button class="md:hidden text-2xl" id="menu-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
+        <button class="absolute top-6 right-6" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <a href="#about" class="menu-link">Giới thiệu</a>
+        <a href="#skills" class="menu-link">Kỹ năng</a>
+        <a href="#projects" class="menu-link">Dự án</a>
+        <a href="#contact" class="menu-link">Liên hệ</a>
+    </div>
+
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <span class="inline-block bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">Hello World!</span>
+                <h1 class="text-6xl md:text-8xl font-extrabold mb-4 tracking-tight text-slate-900">
+                    Đỗ Văn Minh
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-slate-500 font-medium mb-8">Sinh viên ngành Web Developer</h2>
+                <p class="text-slate-500 text-lg mb-10 max-w-lg leading-relaxed">
+                    Biến ý tưởng thành hiện thực thông qua code sạch và tối ưu.
+                </p>
+                <div>
+                    <a href="Portfolio - Đỗ Văn Minh.pdf" download class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-200 group">
+                        <i class="fa-solid fa-download mr-3 group-hover:animate-bounce"></i>
+                        Tải Portfolio (PDF)
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center relative">
+                <div class="absolute -top-6 left-1/4 z-20 bg-white p-4 rounded-2xl shadow-xl hidden md:block">
+                    <i class="fa-solid fa-code text-blue-600 text-2xl"></i>
+                </div>
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <img src="0.jpg" 
+                         alt="Avatar" 
+                         class="w-full h-full object-cover rounded-[2rem] shadow-2xl transition duration-500 border-8 border-white">
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-2xl shadow-lg hidden md:block">
+                        <i class="fa-solid fa-database text-teal-500 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 text-slate-900">Kỹ năng chuyên môn</h2>
+                <p class="text-slate-500 text-lg">Công nghệ tôi sử dụng hàng ngày</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-window-maximize text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-6">Frontend</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> TypeScript
+                        </li>
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> Tailwind CSS
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-server text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-6">Backend</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> Node.js
+                        </li>
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> Php
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-database text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-6">Database</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> MongoDB
+                        </li>
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> MySQL
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-terminal text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-6">Tools</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> Git
+                        </li>
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> Figma
+                        </li>
+                        <li class="flex items-center text-slate-600 font-medium">
+                            <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span> VS Code
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-slate-900">Dự án tiêu biểu</h2>
+                <p class="text-slate-500 text-lg">Các sản phẩm đã thực hiện</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition duration-500 border border-slate-100">
+                    <div class="h-80 overflow-hidden relative group">
+                        <img src="1.png" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <a href="#" class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-slate-900 hover:text-blue-600 hover:scale-110 transition shadow-lg" title="Xem Code trên Github">
+                                <i class="fa-brands fa-github text-2xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-slate-900 hover:text-blue-600 hover:scale-110 transition shadow-lg" title="Xem Demo trực tiếp">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Chill Drink</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">Shop bán đồ uống giải khát với giao diện thân thiện và trải nghiệm người dùng tuyệt vời.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-lg text-xs font-bold">Php</span>
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-lg text-xs font-bold">Html</span>
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-lg text-xs font-bold">Javascript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition duration-500 border border-slate-100">
+                    <div class="h-80 overflow-hidden relative group">
+                        <img src="2.png" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <a href="#" class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-slate-900 hover:text-blue-600 hover:scale-110 transition shadow-lg" title="Xem Code trên Github">
+                                <i class="fa-brands fa-github text-2xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-slate-900 hover:text-blue-600 hover:scale-110 transition shadow-lg" title="Xem Demo trực tiếp">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Bonbon Shop</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">Shop bán quần áo </p>
+                        <div class="flex flex-wrap gap-3">
+                                                        <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-lg text-xs font-bold">Php</span>
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-lg text-xs font-bold">Html</span>
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-lg text-xs font-bold">Javascript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Liên hệ với tôi</h2>
+                <p class="text-slate-400 mb-12 text-lg leading-relaxed">
+                    Bạn có dự án thú vị hay một cơ hội nghề nghiệp? 
+                    Đừng ngần ngại liên lạc, tôi sẽ phản hồi sớm nhất có thể!
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-6">
+                        <div class="w-14 h-14 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm font-medium">Email</p>
+                            <p class="text-lg font-bold">dovanminhb2@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <div class="w-14 h-14 bg-teal-600/20 text-teal-400 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm font-medium">Số điện thoại</p>
+                            <p class="text-lg font-bold">0945 606 336</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/5 p-10 rounded-[2.5rem] backdrop-blur-sm border border-white/10">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-2">Họ tên</label>
+                            <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Nguyễn Văn A">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-2">Email</label>
+                            <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="abc@gmail.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Lời nhắn</label>
+                        <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Tôi có thể giúp gì cho bạn?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-900/20">Gửi lời nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center text-slate-400 text-sm">
+        <div class="flex justify-center space-x-8 mb-8">
+        </div>
+        <p>© 2026 Đỗ Văn Minh</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass', 'shadow-xl', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('glass', 'shadow-xl', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+        closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Form submission (UI Simulation)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.innerText = "Đã gửi!";
+            btn.classList.add('bg-green-600');
+            setTimeout(() => {
+                btn.innerText = "Gửi lời nhắn";
+                btn.classList.remove('bg-green-600');
+                e.target.reset();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
